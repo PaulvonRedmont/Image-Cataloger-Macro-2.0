@@ -29,22 +29,22 @@ tesseract_path = r'C:\Users\paule\AppData\Local\Programs\Tesseract-OCR\tesseract
 pytesseract.pytesseract.tesseract_cmd = tesseract_path
 
 file_path = r"C:\Users\paule\Desktop\Auto Cataloger\Auto Cataloger Log.txt"
-folder_path = r"C:\Users\paule\Desktop\Auto Cataloger\AI Book Cataloging Photos"
+folder_path = r"optional folder path for copying images to perhaps train an AI on later to do this task for us (?)"
 
-folder_path_for_beginning_of_book = r"C:\Users\paule\Desktop\Auto Cataloger\AI Book Cataloging Photos\Beginning of Book"
-folder_path_for_end_of_book = r"C:\Users\paule\Desktop\Auto Cataloger\AI Book Cataloging Photos\End of Book Crusades Buffer"
+folder_path_for_beginning_of_book = "beginning of book file path folder"
+folder_path_for_end_of_book = "end of book file path folder"
 
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 # Import functions for handling book count
 def write_book_count(count):
-    with open(r"C:\Users\paule\Desktop\Auto Cataloger\Auto Cataloger Backend Data.txt", 'w') as file:
+    with open(r"path to random, blank txt document to keep the count of books cataloged even after the script is turned off", 'w') as file:
         file.write(str(count))
 
 def read_book_count():
     try:
-        with open(r"C:\Users\paule\Desktop\Auto Cataloger\Auto Cataloger Backend Data.txt", 'r') as file:
+        with open(r"path to random, blank txt document to keep the count of books cataloged even after the script is turned off", 'r') as file:
             content = file.read().strip()
         if content:
             return int(content)
@@ -293,7 +293,7 @@ File Path: {file_path_of_title_page}
     time_to_get_file_path, time_to_copy_title_page, time_to_copy_end_page, time_to_resize_image, time_to_OCR, time_to_clean_text, time_to_write_to_log = 0
 
 def print_finishing_message():
-    print("Successfully Terminated Program, leh")
+    print("Successfully Terminated Program")
 
 def run_macro():
     keyboard.add_hotkey('1', run_program)  # Run the program when '1' is pressed
